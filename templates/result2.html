@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Credit Score Result</title>
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/logo.png') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <style>
+        body {
+            background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        
+        .score-box {
+            background-color: #fff;
+            padding: 30px 40px;
+            border-radius: 60px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            text-align: center;
+        }
+        
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        
+        .score-value {
+            font-size: 28px;
+            font-weight: bold;
+            color: #1a73e8;
+            margin: 10px 0;
+        }
+        
+        .score-category {
+            font-size: 20px;
+            font-weight: bold;
+            color: #34a853;
+            margin-bottom: 15px;
+        }
+        
+        .advice {
+            font-size: 15px;
+            color: #444;
+            background-color: #f2f2f2;
+            padding: 12px 15px;
+            border-radius: 30px;
+        }
+        
+        .button-container {
+            margin-top: 25px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        
+        .button-container button {
+            background-color: #80d0c7;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 80px;
+            cursor: pointer;
+        }
+        
+        .button-container button:hover {
+            background-color: #13547a;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="score-box">
+        <h2>Hi {{ name }}, here is your predicted Credit Score</h2>
+
+        <div class="score-value">Score: {{ score }}</div>
+        <div class="score-category">Category: {{ category }}</div>
+
+        <div class="advice">
+            {{ advice }}
+        </div>
+
+        <div class="button-container">
+            <button onclick="window.location.href='/'">Home</button>
+            <button onclick="window.location.href='/credit-score'">Back</button>
+        </div>
+    </div>
+</body>
+
+</html>

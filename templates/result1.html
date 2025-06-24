@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Extracted Invoice Fields</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/logo.png') }}">
+    <style>
+        body {
+            background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        
+        .invoice-box {
+            background-color: #fff;
+            padding: 30px 40px;
+            border-radius: 60px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            width: 400px;
+        }
+        
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        
+        .upload-section {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        
+        input[type="file"] {
+            display: none;
+        }
+        
+        .custom-file-upload {
+            background-color: #80d0c7;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 80px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        
+        .custom-file-upload:hover {
+            background-color: #13547a;
+        }
+        
+        #fileName {
+            font-size: 14px;
+            color: #333;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 180px;
+        }
+        
+        button {
+            width: 50%;
+            padding: 10px;
+            font-size: 14px;
+            border: none;
+            border-radius: 80px;
+            background-color: #80d0c7;
+            color: white;
+            cursor: pointer;
+            margin: 0 auto 20px auto;
+            display: block;
+        }
+        
+        button:hover {
+            background-color: #13547a;
+        }
+        
+        .field-group {
+            margin-bottom: 15px;
+            width: 95%;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #000000;
+        }
+        
+        input[type="text"] {
+            width: 100%;
+            padding: 8px 10px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="invoice-box">
+        <h2>Extracted Invoice Fields</h2>
+
+        <form method="POST" action="/extract" enctype="multipart/form-data">
+            <div class="upload-section">
+                <label for="invoiceFile" class="custom-file-upload">Choose File</label>
+                <input type="file" id="invoiceFile" name="invoice" accept=".pdf,.jpg,.png" required onchange="showFileName(event)">
+                <span id="fileName">No file chosen</span>
+            </div>
+
+            <button type="submit">Upload and Extract</button>
+        </form>
+
+        <div class="field-group">
+            <label for="invoiceNumber">Invoice Number:</label>
+            <input type="text" id="invoiceNumber" value="{{ invoice_number or '' }}" readonly>
+        </div>
+
+        <div class="field-group">
+            <label for="date">Date:</label>
+            <input type="text" id="date" value="{{ date or '' }}" readonly>
+        </div>
+
+        <div class="field-group">
+            <label for="amount">Amount:</label>
+            <input type="text" id="amount" value="{{ amount or '' }}" readonly>
+        </div>
+
+        <div class="field-group">
+            <label for="vendor">Vendor:</label>
+            <input type="text" id="vendor" value="{{ vendor or '' }}" readonly>
+        </div>
+
+        <div class="button-container">
+            <button onclick="window.location.href='/'">Home</button>
+        </div>
+    </div>
+
+    <script>
+        function showFileName(event) {
+            const fileInput = event.target;
+            const fileNameSpan = document.getElementById("fileName");
+
+            if (fileInput.files.length > 0) {
+                fileNameSpan.textContent = fileInput.files[0].name;
+            } else {
+                fileNameSpan.textContent = "No file chosen";
+            }
+        }
+        async function extractInvoice() {
+            const fileInput = document.getElementById("invoiceFile");
+            if (fileInput.files.length === 0) {
+                alert("Please select a file first");
+                return;
+            }
+
+            const formData = new FormData();
+            formData.append("file", fileInput.files[0]);
+
+            try {
+                const response = await fetch("/extract_invoice", {
+                    method: "POST",
+                    body: formData
+                });
+
+                if (!response.ok) {
+                    throw new Error(`Error: ${response.status}`);
+                }
+
+                const data = await response.json();
+
+                // Update the form fields with extracted data
+                document.getElementById("invoiceNumber").value = data["Invoice Number"] || "Not found";
+                document.getElementById("date").value = data["Date"] || "Not found";
+                document.getElementById("amount").value = data["Amount"] || "Not found";
+                document.getElementById("vendor").value = data["Vendor"] || "Not found";
+            } catch (error) {
+                console.error("Error:", error);
+                alert("An error occurred while processing the invoice");
+            }
+        }
+    </script>
+</body>
+
+</html>

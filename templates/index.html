@@ -1,0 +1,733 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Infinity</title>
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/logo.png') }}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans&display=swap" rel="stylesheet">
+
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/bootstrap-icons.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/templatemo-topic-listing.css') }}" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <script src="{{ url_for('static', filename='js/custom.js') }}"></script>
+
+</head>
+
+<body id="top">
+
+    <main>
+
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+
+                <a class="navbar-brand" href="index.html">
+                    <div class="flipping-icon">
+                        <i class="bi bi-robot active-icon"></i>
+                        <i class="bi bi-graph-up-arrow"></i>
+                        <i class="bi bi-lightbulb"></i>
+                        <i class="bi bi-cpu"></i>
+                    </div>
+                    <span>Infinity</span>
+                </a>
+
+
+                <div class="d-lg-none ms-auto me-4">
+                    <a href="#top" class="navbar-icon bi-person smoothscroll"></a>
+                </div>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-lg-5 me-lg-auto">
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="#section_1">Home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="#section_2">Your details</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="#section_3">Tools</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="#section_4">Customer Reviews</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="#section_5">Contact</a>
+                        </li>
+
+                    </ul>
+
+                    <div class="d-none d-lg-block">
+                        <a href="{{ url_for('login_page') }}" class="navbar-icon bi-person smoothscroll"></a>
+
+
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+
+        <section class="hero-section d-flex justify-content-center align-items-center" id="section_1">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-8 col-12 mx-auto">
+                        <h1 class="text-white text-center">Discover. Learn. Enjoy. Marketing.</h1>
+
+                        <h6 class="text-center">platform for beginners around the world</h6>
+
+                        <form method="get" class="custom-form mt-4 pt-2 mb-lg-0 mb-5" role="search">
+
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <section class="featured-section">
+            <div class="container">
+                <div class="row justify-content-center">
+
+                    <div class="col-lg-4 col-12 mb-4 mb-lg-0">
+                        <div class="custom-block bg-white shadow-lg">
+                            <a href="topics-detail.html">
+                                <div class="d-flex">
+                                    <div>
+                                        <h5 class="mb-2">Artificial Intelligence</h5>
+
+
+                                    </div>
+
+                                </div>
+                            </a>
+                            <img src="{{ url_for('static', filename='images/topics/brain.png') }}" class="custom-block-image img-fluid" alt="Artificial Intelligence" style="width: 250px; height: auto;">
+                            <p class="mb-0">We are giving best knowledge and solutions to novices.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-12">
+                        <div class="custom-block custom-block-overlay">
+                            <div class="d-flex flex-column h-100">
+                                <img src="{{ url_for('static', filename='images/businesswoman-using-tablet-analysis.jpg') }}" class="custom-block-image img-fluid" alt="Businesswoman analyzing data">
+
+                                <div class="custom-block-overlay-text d-flex">
+                                    <div>
+                                        <h5 class="text-white mb-2">Finance</h5>
+
+                                        <div class="scroll-box text-white">
+                                            <p class="custom-text"><br>🌟Empowering Beginners in Finance with AI & ML: "We simplify complex financial data using AI and machine learning — making finance accessible for everyone, even beginners." <br>
+                                                <br>🤖💸 AI for All: Your Financial Mentor<br> "You don’t need to be an expert to understand your finances. Our AI tools guide you step-by-step — smart insights, simple choices." <br><br> 🧠📊Learn, Invest,
+                                                Grow — with Machine Learning<br> "From saving tips to stock predictions, we’re helping newcomers make confident financial decisions with the power of ML." <br><br> 🚀Future-Ready Finance, Made Simple<br>"We’re
+                                                bridging the gap between finance and technology for beginners — learn, track, and grow with AI on your side." <br><br> 💼📈Starting Smart in Finance<br> "Our mission: Help novices gain financial confidence
+                                                through easy-to-use AI solutions. Because smart investing shouldn’t be hard."
+                                            </p>
+                                        </div>
+
+                                        <a href="topics-detail.html" class="btn custom-btn mt-2 mt-lg-5">Learn More</a>
+                                    </div>
+                                </div>
+
+                                <div class="social-share d-flex">
+                                    <p class="text-white me-4">Share:</p>
+
+                                    <ul class="social-icon">
+                                        <li class="social-icon-item">
+                                            <a href="#" class="social-icon-link bi-twitter"></a>
+                                        </li>
+                                        <li class="social-icon-item">
+                                            <a href="#" class="social-icon-link bi-facebook"></a>
+                                        </li>
+                                        <li class="social-icon-item">
+                                            <a href="#" class="social-icon-link bi-pinterest"></a>
+                                        </li>
+                                    </ul>
+
+                                    <a href="#" class="custom-icon bi-bookmark ms-auto"></a>
+                                </div>
+
+                                <div class="section-overlay"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <section class="explore-section section-padding" id="section_2">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-12 text-center">
+                        <h2 class="mb-4">User Details</h1>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="container-fluid">
+                <div class="row">
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="design-tab" data-bs-toggle="tab" data-bs-target="#design-tab-pane" type="button" role="tab" aria-controls="design-tab-pane" aria-selected="true">Personal</button>
+                        </li>
+
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="marketing-tab" data-bs-toggle="tab" data-bs-target="#marketing-tab-pane" type="button" role="tab" aria-controls="marketing-tab-pane" aria-selected="false">Experience</button>
+                        </li>
+
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="finance-tab" data-bs-toggle="tab" data-bs-target="#finance-tab-pane" type="button" role="tab" aria-controls="finance-tab-pane" aria-selected="false">Finance</button>
+                        </li>
+
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="music-tab" data-bs-toggle="tab" data-bs-target="#music-tab-pane" type="button" role="tab" aria-controls="music-tab-pane" aria-selected="false">Market</button>
+                        </li>
+
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="education-tab" data-bs-toggle="tab" data-bs-target="#education-tab-pane" type="button" role="tab" aria-controls="education-tab-pane" aria-selected="false">Education</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-12">
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="design-tab-pane" role="tabpanel" aria-labelledby="design-tab" tabindex="0">
+                                <div class="row">
+
+                                    <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
+                                        <div class="custom-block bg-white shadow-lg">
+                                            <a href="topics-detail.html">
+                                                <div class="d-flex">
+                                                    <div>
+                                                        <h5 class="mb-2">Graphic</h5>
+
+                                                        <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
+                                                    </div>
+
+                                                    <span class="badge bg-design rounded-pill ms-auto">75</span>
+                                                </div>
+
+                                                <img src="{{ url_for('static', filename='images/topics/undraw_Redesign_feedback_re_jvm0.png') }}" class="custom-block-image img-fluid" alt="Design Feedback Illustration">
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="tab-pane fade" id="marketing-tab-pane" role="tabpanel" aria-labelledby="marketing-tab" tabindex="0">
+                                <div class="row">
+                                    <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-3">
+                                        <div class="custom-block bg-white shadow-lg">
+                                            <a href="topics-detail.html">
+                                                <div class="d-flex">
+                                                    <div>
+                                                        <h5 class="mb-2">Advertising</h5>
+
+                                                        <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
+                                                    </div>
+
+                                                    <span class="badge bg-advertising rounded-pill ms-auto">30</span>
+                                                </div>
+
+                                                <img src="images/topics/undraw_online_ad_re_ol62.png" class="custom-block-image img-fluid" alt="">
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-3">
+                                        <div class="custom-block bg-white shadow-lg">
+                                            <a href="topics-detail.html">
+                                                <div class="d-flex">
+                                                    <div>
+                                                        <h5 class="mb-2">Video Content</h5>
+
+                                                        <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
+                                                    </div>
+
+                                                    <span class="badge bg-advertising rounded-pill ms-auto">65</span>
+                                                </div>
+
+                                                <img src="images/topics/undraw_Group_video_re_btu7.png" class="custom-block-image img-fluid" alt="">
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-4 col-md-6 col-12">
+                                        <div class="custom-block bg-white shadow-lg">
+                                            <a href="topics-detail.html">
+                                                <div class="d-flex">
+                                                    <div>
+                                                        <h5 class="mb-2">Viral Tweet</h5>
+
+                                                        <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
+                                                    </div>
+
+                                                    <span class="badge bg-advertising rounded-pill ms-auto">50</span>
+                                                </div>
+
+                                                <img src="images/topics/undraw_viral_tweet_gndb.png" class="custom-block-image img-fluid" alt="">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane fade" id="finance-tab-pane" role="tabpanel" aria-labelledby="finance-tab" tabindex="0">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-12 mb-4 mb-lg-0">
+                                        <div class="custom-block bg-white shadow-lg">
+                                            <a href="topics-detail.html">
+                                                <div class="d-flex">
+                                                    <div>
+                                                        <h5 class="mb-2">Investment</h5>
+
+                                                        <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
+                                                    </div>
+
+                                                    <span class="badge bg-finance rounded-pill ms-auto">30</span>
+                                                </div>
+
+                                                <img src="images/topics/undraw_Finance_re_gnv2.png" class="custom-block-image img-fluid" alt="">
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6 col-md-6 col-12">
+                                        <div class="custom-block custom-block-overlay">
+                                            <div class="d-flex flex-column h-100">
+                                                <img src="images/businesswoman-using-tablet-analysis-graph-company-finance-strategy-statistics-success-concept-planning-future-office-room.jpg" class="custom-block-image img-fluid" alt="">
+
+                                                <div class="custom-block-overlay-text d-flex">
+                                                    <div>
+                                                        <h5 class="text-white mb-2">Finance</h5>
+
+                                                        <p class="text-white">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint animi necessitatibus aperiam repudiandae nam omnis</p>
+
+                                                        <a href="topics-detail.html" class="btn custom-btn mt-2 mt-lg-3">Learn More</a>
+                                                    </div>
+
+                                                    <span class="badge bg-finance rounded-pill ms-auto">25</span>
+                                                </div>
+
+                                                <div class="social-share d-flex">
+                                                    <p class="text-white me-4">Share:</p>
+
+                                                    <ul class="social-icon">
+                                                        <li class="social-icon-item">
+                                                            <a href="#" class="social-icon-link bi-twitter"></a>
+                                                        </li>
+
+                                                        <li class="social-icon-item">
+                                                            <a href="#" class="social-icon-link bi-facebook"></a>
+                                                        </li>
+
+                                                        <li class="social-icon-item">
+                                                            <a href="#" class="social-icon-link bi-pinterest"></a>
+                                                        </li>
+                                                    </ul>
+
+                                                    <a href="#" class="custom-icon bi-bookmark ms-auto"></a>
+                                                </div>
+
+                                                <div class="section-overlay"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane fade" id="music-tab-pane" role="tabpanel" aria-labelledby="music-tab" tabindex="0">
+                                <div class="row">
+                                    <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-3">
+                                        <div class="custom-block bg-white shadow-lg">
+                                            <a href="topics-detail.html">
+                                                <div class="d-flex">
+                                                    <div>
+                                                        <h5 class="mb-2">Composing Song</h5>
+
+                                                        <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
+                                                    </div>
+
+                                                    <span class="badge bg-music rounded-pill ms-auto">45</span>
+                                                </div>
+
+                                                <img src="images/topics/undraw_Compose_music_re_wpiw.png" class="custom-block-image img-fluid" alt="">
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-3">
+                                        <div class="custom-block bg-white shadow-lg">
+                                            <a href="topics-detail.html">
+                                                <div class="d-flex">
+                                                    <div>
+                                                        <h5 class="mb-2">Online Music</h5>
+
+                                                        <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
+                                                    </div>
+
+                                                    <span class="badge bg-music rounded-pill ms-auto">45</span>
+                                                </div>
+
+                                                <img src="images/topics/undraw_happy_music_g6wc.png" class="custom-block-image img-fluid" alt="">
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-4 col-md-6 col-12">
+                                        <div class="custom-block bg-white shadow-lg">
+                                            <a href="topics-detail.html">
+                                                <div class="d-flex">
+                                                    <div>
+                                                        <h5 class="mb-2">Podcast</h5>
+
+                                                        <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
+                                                    </div>
+
+                                                    <span class="badge bg-music rounded-pill ms-auto">20</span>
+                                                </div>
+
+                                                <img src="images/topics/undraw_Podcast_audience_re_4i5q.png" class="custom-block-image img-fluid" alt="">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane fade" id="education-tab-pane" role="tabpanel" aria-labelledby="education-tab" tabindex="0">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-12 mb-4 mb-lg-3">
+                                        <div class="custom-block bg-white shadow-lg">
+                                            <a href="topics-detail.html">
+                                                <div class="d-flex">
+                                                    <div>
+                                                        <h5 class="mb-2">Graduation</h5>
+
+                                                        <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
+                                                    </div>
+
+                                                    <span class="badge bg-education rounded-pill ms-auto">80</span>
+                                                </div>
+
+                                                <img src="images/topics/undraw_Graduation_re_gthn.png" class="custom-block-image img-fluid" alt="">
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6 col-md-6 col-12">
+                                        <div class="custom-block bg-white shadow-lg">
+                                            <a href="topics-detail.html">
+                                                <div class="d-flex">
+                                                    <div>
+                                                        <h5 class="mb-2">Educator</h5>
+
+                                                        <p class="mb-0">Lorem Ipsum dolor sit amet consectetur</p>
+                                                    </div>
+
+                                                    <span class="badge bg-education rounded-pill ms-auto">75</span>
+                                                </div>
+
+                                                <img src="images/topics/undraw_Educator_re_ju47.png" class="custom-block-image img-fluid" alt="">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+        </section>
+
+
+        <section class="hero-section d-flex flex-column justify-content-center align-items-center" id="section_3">
+
+            <div class="continer">
+                <div class="row">
+                    <div class="container text-center">
+                        <h2 class="text-white text-uppercase fw-bold mb-5">Tools</h2>
+                    </div>
+
+                    <div class="button-container">
+                        <button class="custom-button" onclick="window.location.href='/result1'">Invoice Analyzer</button>
+                        <button class="custom-button" onclick="window.location.href='/credit-score'">Credit score</button>
+                    </div>
+
+                    <!-- <div class="container d-flex justify-content-center align-items-center" style="min-height: 280px; position: relative;">
+                        <ul class="menu">
+                            <div class="toggle">
+                                <ion-icon name="add-outline"></ion-icon>
+                            </div>
+
+                            <li style="--i:0;--clr:#ff2972;">
+                                <a href="invoicedata.html">
+                                    <ion-icon name="time"></ion-icon>
+                                </a>
+                            </li>
+                            <li style="--i:1;--clr:#fee800;">
+                                <a href="animation box/animationbox.html">
+                                    <ion-icon name="gift"></ion-icon>
+                                </a>
+                            </li>
+                            <li style="--i:2;--clr:#04fc43;">
+                                <a href="HAPPY BIRTHDAY/happybirthday.html">
+                                    <ion-icon name="aperture"></ion-icon>
+                                </a>
+                            </li>
+                            <li style="--i:3;--clr:#fe00f1;">
+                                <a href="infinite/infinite.html">
+                                    <ion-icon name="infinite"></ion-icon>
+                                </a>
+                            </li>
+                            <li style="--i:4;--clr:#00b0fe;">
+                                <a href="blue-flower/blueflower.html">
+                                    <ion-icon name="rose"></ion-icon>
+                                </a>
+                            </li>
+                            <li style="--i:5;--clr:#fea600;">
+                                <a href="pattern/pattern.html">
+                                    <ion-icon name="heart-half"></ion-icon>
+                                </a>
+                            </li>
+                            <li style="--i:6;--clr:#a529ff;">
+                                <a href="flowerring/flowerring.html">
+                                    <ion-icon name="flower"></ion-icon>
+                                </a>
+                            </li>
+                            <li style="--i:7;--clr:#01bdab;">
+                                <a href="end animation/end.html">
+                                    <ion-icon name="bonfire"></ion-icon>
+                                </a>
+                            </li>
+                        </ul>
+                    </div> -->
+                </div>
+            </div>
+
+
+        </section>
+
+
+        <section class="faq-section section-padding" id="section_4">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-6 col-12">
+                        <h2 class="mb-4">Customer Reviews</h2>
+                    </div>
+
+                    <div class="clearfix"></div>
+
+                    <div class="col-lg-5 col-12">
+                        <img src="{{ url_for('static', filename='images/faq_graphic.jpg') }}" class="img-fluid" alt="Frequently Asked Questions Illustration">
+                    </div>
+
+                    <div class="col-lg-6 col-12 m-auto">
+                        <div class="accordion" id="accordionExample">
+                            <section class="review-section-wrapper">
+                                <div class="review-carousel">
+                                    <div class="review-item show">
+                                        <div class="wrapper">
+                                            <div class="title">Work <small>Hard</small> Play <small>Hard</small></div>
+                                            <div class="description">
+                                                <p>This platform helped me learn finance with confidence!</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="review-item">
+                                        <div class="wrapper">
+                                            <div class="description text-right">
+                                                <p>Excellent guidance and great tools for beginners!</p>
+                                            </div>
+                                            <div class="title">Grow <small>Smart</small> Invest <small>Easy</small></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="review-item">
+                                        <div class="wrapper">
+                                            <div class="title">Simple <small>Start</small> Strong <small>Finish</small></div>
+                                            <div class="description">
+                                                <p>AI tools made complex concepts super easy!</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <form class="review-form" onsubmit="submitReview(event)">
+                                    <input type="email" id="emailInput" placeholder="Your Email" required />
+                                    <textarea id="reviewInput" placeholder="Write your review..." rows="4" required></textarea>
+                                    <button type="submit">Submit Review</button>
+                                </form>
+                            </section>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <section class="contact-section section-padding section-bg" id="section_5">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-12 col-12 text-center">
+                        <h2 class="mb-5">Get in touch</h2>
+                    </div>
+
+                    <div class="col-lg-5 col-12 mb-4 mb-lg-0">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3684.5075967406046!2d88.48812579936308!3d22.560111045486885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a020b007af9ca31%3A0xa3a41f4146303146!2sUEM!5e0!3m2!1sen!2sin!4v1750651475860!5m2!1sen!2sin"
+                            width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 col-12 mb-3 mb-lg- mb-md-0 ms-auto">
+                        <h4 class="mb-3">Head office</h4>
+
+                        <p>INSTITUTE OF ENGINEERING & MANAGEMENT, NEWTOWN UNIVERSITY AREA, ACTION AREA-III, NEWTOWN, KOLKATA-700160 INDIA</p>
+
+                        <hr>
+
+                        <p class="d-flex align-items-center mb-1">
+                            <span class="me-2">Phone</span>
+
+                            <a href="tel: 305-240-9671" class="site-footer-link">
+                                    1234567890
+                                </a>
+                        </p>
+
+                        <p class="d-flex align-items-center">
+                            <span class="me-2">Email</span>
+
+                            <a href="mailto:info@company.com" class="site-footer-link">
+                                    infinity.com
+                                </a>
+                        </p>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 col-12 mx-auto">
+                        <h4 class="mb-3">Second office</h4>
+
+                        <p>INSTITUTE OF ENGINEERING & MANAGEMENT, NEWTOWN UNIVERSITY AREA, ACTION AREA-III, NEWTOWN, KOLKATA-700160 INDIA</p>
+
+                        <hr>
+
+                        <p class="d-flex align-items-center mb-1">
+                            <span class="me-2">Phone</span>
+
+                            <a href="tel: 110-220-3400" class="site-footer-link">
+                                    1234567890
+                                </a>
+                        </p>
+
+                        <p class="d-flex align-items-center">
+                            <span class="me-2">Email</span>
+
+                            <a href="mailto:info@company.com" class="site-footer-link">
+                                    infinity.com
+                                </a>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="footer-basic col-12">
+
+                    <div class="social-icons-neon">
+                        <i class="fab fa-apple" id="apple"></i>
+                        <i class="fab fa-github-square" id="github"></i>
+                        <i class="fab fa-twitter" id="twitter"></i>
+                        <i class="fab fa-facebook-square" id="facebook"></i>
+                    </div>
+
+                    <ul class="list-inline">
+                        <li class="list-inline-item"><a href="#">Home</a></li>
+                        <li class="list-inline-item"><a href="#">Services</a></li>
+                        <li class="list-inline-item"><a href="#">About</a></li>
+                        <li class="list-inline-item"><a href="#">Terms</a></li>
+                        <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+                    </ul>
+
+                    <p class="copyright">Infinity © 2025</p>
+                </div>
+            </div>
+        </div>
+
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/jquery.sticky.js"></script>
+        <script src="js/click-scroll.js"></script>
+        <script src="js/custom.js"></script>
+
+
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const icons = document.querySelectorAll('.flipping-icon i');
+                let currentIndex = 0;
+
+                function flipIcon() {
+                    icons[currentIndex].classList.remove('active-icon');
+                    currentIndex = (currentIndex + 1) % icons.length;
+                    icons[currentIndex].classList.add('active-icon');
+                }
+                setInterval(flipIcon, 2000);
+            });
+
+            const reviews = document.querySelectorAll('.review-item');
+            let current = 0;
+
+            function rotateReviews() {
+                reviews[current].classList.add('flipping');
+
+                setTimeout(() => {
+                    reviews[current].classList.remove('show', 'flipping');
+                    current = (current + 1) % reviews.length;
+                    reviews[current].classList.add('show');
+                }, 800);
+            }
+            setInterval(rotateReviews, 3000);
+            reviews[current].classList.add('show');
+        </script>
+
+</body>
+
+</html>
